@@ -1,0 +1,29 @@
+= Spring Batch Job Task Metrics sample
+
+Simple Batch application that reads from a list and writes results to console.
+The purpose is to verify that metrics are reported.
+
+== Requirements
+
+* Java 8 or Above
+
+== Classes
+
+* BatchJobApplication - the Spring Boot Main Application
+
+== Build
+
+=== Build and test
+[source,shell,indent=2]
+----
+./mvnw clean package
+----
+
+== Run
+
+=== Command line basic run
+[source,shell,indent=2]
+----
+java -jar target/metric-batch-task-1.0.0.jar --management.metrics.tags.service=task-application --management.metrics..application=metricsample-58 --spring.cloud.task.name=metricsample
+----
+
